@@ -1,0 +1,56 @@
+body{
+    text-align: center;
+    background-color: #011F3F;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    margin-top: 20px;
+}
+
+.btn{
+    height: 180px;
+    width: 180px;
+    border-radius: 20%;
+    border:10px solid black;
+    margin:1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+
+.btn:active{
+    transform: scale(0.95);
+}
+
+.flash{
+    background-color: white !important;
+}
+.yellow{
+    background-color: #f99b45;
+}
+.red{
+    background-color:#d95980;
+}
+.purple{
+    background-color: #819ff9;
+}
+.green{
+    background-color:#63aac0;
+}
+
+@media(max-width:500px){
+    .btn{
+        height:130px;
+        width:130px;
+    }
+}
