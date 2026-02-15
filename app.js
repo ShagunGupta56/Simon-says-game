@@ -7,9 +7,10 @@ let started = false;
 let level = 0;
 
 let h2 = document.querySelector("h2");
+h2.innerText = "Tap anywhere to start the game";
 
-document.addEventListener("keypress", function () {
-    if (started == false) {
+document.addEventListener("click", function (event) {
+    if (started == false && !event.target.classList.contains("btn")) {
         started = true;
         levelUp();
     }
@@ -57,7 +58,7 @@ function checkAns(idx) {
             setTimeout(levelUp, 1000);
         }
     } else {
-        h2.innerText = "Game Over! Press any key to restart";
+        h2.innerText = "Game Over! Tap anywhere to restart";
         reset();
     }
 }
@@ -68,3 +69,4 @@ function reset() {
     userSeq = [];
     level = 0;
 }
+
